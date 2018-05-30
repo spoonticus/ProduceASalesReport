@@ -1,0 +1,57 @@
+ECHO is on.
+Produce a Sales Report
+
+INPUTS
+
+read sales records
+	customer's name, customer's number, sales amount, and tax code
+
+PROCESSING STEPS
+
+check tax code
+	use the appropriate sales tax percent for the tax code
+mutiply sales amount with sales tax percent to find sales tax
+add sales amount to sales tax to find total amount
+
+OUTPUTS
+
+print heading
+	"Sales Report"
+print
+	customer's number, customer's name, sales amount, sales tax, and total amount
+	
+---------------------------------------------------------------------------------------
+
+PSUEDOCODE
+
+scan customer's number
+	save customerNumber
+scan customer's name
+	save customerName
+scan sales amount
+	save salesAmount
+scan tax code
+	save taxCode
+CASE OF salesTaxPercent
+	0 = 0
+	1 = 0.03
+	2 = 0.05
+ENDCASE
+salesTax = salesAmount * salesTaxPercent
+totalAmount = salesTax + salesAmount
+
+print heading
+	"Sales Report"
+print 
+	"Customer's Number: " + customerNumber
+print	
+	"Customer's Name: " + customerName
+print
+	"Sales Amount: " + salesAmount
+print
+	"Sales Tax: " + salesTax
+print
+	"Total Amount Due: " + salesAmount
+
+END
+
